@@ -1,0 +1,933 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+html {
+  font-size: 62.5%;
+}
+.accueil {
+  height: 100vh;
+  width: 100%;
+  background-color: #dfecfed5;
+}
+
+.container {
+  height: 90%;
+  width: 94%;
+  overflow: hidden;
+  position: relative;
+  top: 4%;
+  left: 3%;
+  border-radius: 4rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.7);
+}
+.slide {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  border-radius: 4rem;
+}
+
+.slide-img-wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 4rem;
+  background-color: #000;
+}
+.slide-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4rem;
+  opacity: 0.35;
+}
+.slide-title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  top: 47%;
+  left: -1%;
+}
+.slide-title h1 {
+  color: #fff;
+  font-size: 4.2rem;
+  padding-left: 2rem;
+
+  font-family: "Delius Unicase";
+}
+.slide-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90rem;
+  height: auto;
+  top: 62%;
+  left: 22%;
+}
+.slide-text p {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: "Nunito";
+}
+.header {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 4rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.features {
+  position: absolute;
+  left: 66rem;
+  width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .header a {
+  ;
+} */
+
+/* HoverLines.css */
+.features a {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 1.7rem;
+}
+
+/* Ligne du haut avec ::before */
+.features a::before,
+.features a::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  background-color: #fff;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+/* Ligne du haut */
+.features a::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+.features .active::before {
+  width: 100%;
+}
+.features .active::after {
+  width: 100%;
+}
+
+/* Ligne du bas */
+.features a::after {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+}
+
+/* Effet au survol */
+.features a:hover::before {
+  width: 100%;
+}
+
+.features a:hover::after {
+  width: 100%;
+}
+/******************************************/
+
+.dropdown {
+  position: relative;
+  margin-right: 20px;
+}
+
+.dropdown > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 26.7rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #2c3e50;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover > a {
+  background-color: #34495e;
+}
+
+/*****************************************/
+.logo {
+  position: absolute;
+  left: 12rem;
+}
+.btn {
+  position: absolute;
+  top: 52rem;
+  height: 4rem;
+  width: 26rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 4rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  font-family: "Signika Negative";
+}
+.sign-in {
+  left: 44rem;
+  background-color: rgb(123, 150, 204);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.sign-up {
+  left: 73rem;
+  background-color: #fff;
+  color: rgb(110, 137, 192);
+  border: none;
+  font-weight: bold;
+}
+.sign-in-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.left-img {
+  height: 70rem;
+  width: "auto";
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.4);
+  border-radius: 2rem;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.sign-in-page .divider-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+  /* margin: 0 2rem 0 2rem; */
+  margin-bottom: 38rem;
+}
+
+.sign-in-page .divider-text::before,
+.divider-text::after {
+  content: "";
+  flex: 1;
+  height: 0.2rem;
+  background: #ccc;
+  margin-right: 2rem;
+}
+.sign-in-page .right {
+  height: 100vh;
+  width: 50%;
+  font-family: "Comic Relief";
+}
+.sign-in-page .formulair {
+  position: relative;
+  height: 80rem;
+  margin: 8rem;
+  margin-left: 15rem;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  padding: 4rem;
+}
+.sign-in-page .formulair h1 {
+  position: absolute;
+  top: 0;
+  font-size: 5rem;
+  font-family: "Tagesschrift";
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+  color: rgb(75, 103, 161);
+}
+.sign-in-page .span1 {
+  position: absolute;
+  top: 9rem;
+  font-size: 1.3rem;
+  left: 5rem;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.3rem;
+  color: #666;
+}
+.sign-in-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 14rem;
+  height: 4rem;
+  width: 42rem;
+  background-color: #fff;
+  border: 0.15rem solid #353333;
+  left: 4.4rem;
+  cursor: pointer;
+}
+
+.sign-in-google:hover,
+.sign-up-google:hover {
+  box-shadow: 0rem 0.5rem 4rem rgba(166, 188, 231, 0.6);
+}
+.sign-in-google span {
+  margin: 1rem;
+}
+.sign-in-page form {
+  margin-top: 0rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  height: 30rem;
+  font-family: 1.4rem;
+}
+
+.sign-in-page .remember {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.sign-in-page .remember-me {
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+}
+.sign-in-page .divider-text::before {
+  margin-right: 2rem;
+}
+.sign-in-page .divider-text::after {
+  margin-left: 2rem;
+}
+.sign-in-btn {
+  height: 3rem;
+  background-color: rgb(142, 176, 233);
+  border: none;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 1.7rem;
+  letter-spacing: 0.12rem;
+  word-spacing: 0.4rem;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.2);
+}
+.sign-in-page form span:last-child {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+  gap: 4rem;
+}
+.sign-in-page .right a {
+  color: rgb(109, 150, 233);
+}
+
+/****************************************/
+
+.sign-up-page .left {
+  height: 100vh;
+  width: 50%;
+  font-family: "Comic Relief";
+}
+.sign-up-page .formulair {
+  position: relative;
+  height: 80rem;
+  width: auto;
+  margin-right: 50rem;
+
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  padding: 4rem;
+  /******/
+  margin-top: 7rem;
+  margin-left: 10rem;
+}
+.sign-up-page .formulair h1 {
+  position: absolute;
+  top: 0;
+  font-size: 4rem;
+  font-family: "Tagesschrift";
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+  color: rgb(75, 103, 161);
+  width: 40rem;
+}
+
+.sign-up-page .span1 {
+  position: absolute;
+  top: 7rem;
+  font-size: 1.3rem;
+  left: 5rem;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.3rem;
+  color: #666;
+  width: 40rem;
+}
+.sign-up-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55rem;
+  height: 4rem;
+  width: 42rem;
+  background-color: #fff;
+  border: 0.15rem solid #353333;
+  left: 4.4rem;
+  cursor: pointer;
+}
+.sign-up-google span {
+  margin: 1rem;
+}
+.sign-up-page form {
+  margin-top: 0rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  height: 36rem;
+  font-family: 1.4rem;
+  top: 13rem;
+}
+
+.remember {
+  margin: 1rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.35rem;
+}
+.sign-up-page .divider-text::before {
+  margin-right: 2rem;
+}
+.sign-up-page .divider-text::after {
+  margin-left: 2rem;
+}
+.sign-up-btn {
+  height: 8rem;
+  background-color: rgb(142, 176, 233);
+  border: none;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 1.7rem;
+  letter-spacing: 0.12rem;
+  word-spacing: 0.4rem;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.2);
+}
+.sign-up-page form span:last-child {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  gap: 4rem;
+}
+.sign-up-page .left a {
+  color: rgb(109, 150, 233);
+}
+.right-img {
+  margin-top: 4rem;
+  margin-left: 6rem;
+  height: 70rem;
+  width: "auto";
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.4);
+  border-radius: 2rem;
+}
+.sign-up-page {
+  /* position: relative; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.sign-up-page .divider-text {
+  position: absolute;
+  top: 49rem;
+  width: 45rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+  /* margin: 0 2rem 0 2rem; */
+  margin-bottom: 38rem;
+}
+
+.sign-up-page .divider-text::before,
+.divider-text::after {
+  content: "";
+  flex: 1;
+  height: 0.2rem;
+  background: #ccc;
+  margin-right: 2rem;
+}
+label {
+  color: #43557f;
+}
+/***********************************************/
+.see-service-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e1e4eb7d;
+  padding-bottom: 4rem;
+}
+.part2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.part2 .img-wrapper {
+  height: 22rem;
+  width: 34rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.part2 .service {
+  height: 30rem;
+  width: 30rem;
+  margin: 2rem 0rem 1rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu";
+}
+
+.part2 .service-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  cursor: pointer;
+}
+.part2 .img-wrapper:hover {
+  transform: translateY(-2rem);
+  box-shadow: 0rem 0.2rem 4rem rgba(109, 150, 233, 0.507);
+}
+.service h1 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #43557f;
+  margin-bottom: 2rem;
+}
+.service p {
+  width: 110%;
+  font-size: 1.4rem;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.part1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 26rem;
+  position: relative;
+}
+.part1 h1 {
+  position: absolute;
+  top: 2rem;
+  font-size: 6rem;
+  font-family: "Tilt Neon";
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.6rem;
+  color: #313d59;
+}
+.part1 p {
+  position: absolute;
+  top: 10rem;
+  font-size: 1.7rem;
+  font-family: "Tilt Neon";
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  color: #313d59;
+  padding: 0 10rem 0 10rem;
+}
+.part1 button {
+  position: absolute;
+  top: 19.5rem;
+  height: 4rem;
+  width: 32rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.08rem;
+  word-spacing: 0.2rem;
+  cursor: pointer;
+  border: 0.154rem solid #313d59;
+  background-color: transparent;
+}
+
+/******************************************* */
+.objectifs-container {
+  height: 60rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.img-cover {
+  position: absolute;
+  height: 60rem;
+  width: 100%;
+  top: 0rem;
+  background-color: #6b92f48f;
+  z-index: 100;
+}
+.objectifs-container h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  position: absolute;
+  top: 5rem;
+  left: 58rem;
+  z-index: 100;
+  font-family: "Signika Negative";
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+}
+.objectifs-container h1 {
+  font-size: 5.4rem;
+  color: #fff;
+  position: absolute;
+  top: 10rem;
+  left: 49rem;
+  z-index: 100;
+  font-family: "Signika Negative";
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+}
+.objectifs {
+  position: absolute;
+  width: 120rem;
+  top: 26rem;
+  left: 20rem;
+  display: flex;
+  gap: 42rem;
+  padding: 0 7rem 0 0;
+  z-index: 1000;
+}
+.objectifs i {
+  z-index: 1000;
+  font-size: 6rem;
+  color: #fff;
+  background: transparent;
+  text-shadow: 0 1rem 4rem rgb(75, 103, 161);
+}
+.objectifs p {
+  color: #fff;
+  width: 180%;
+  margin-left: -2rem;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  font-family: "Signika Negative";
+}
+
+/******************************************************/
+.footer {
+  height: 60rem;
+  width: 100%;
+  background-color: rgb(11, 19, 30);
+  color: #fff;
+  position: relative;
+}
+.steto {
+  height: 60rem;
+  width: auto;
+  position: absolute;
+  left: 62rem;
+  top: 0rem;
+  z-index: 1;
+  opacity: 0.5;
+}
+.footer .adress {
+  padding: 0 3rem 2rem 0;
+  border-bottom: 0.2rem solid #fff;
+}
+.contact div {
+  padding: 0 14rem 2rem 0;
+  border-bottom: 0.2rem solid #fff;
+}
+.footer span,
+a {
+  font-size: 1.9rem;
+  letter-spacing: 0.14rem;
+  word-spacing: 0.4rem;
+}
+.footer a {
+  color: #bbe4f4;
+}
+.footer span {
+  padding: 2rem;
+}
+.footer i {
+  font-size: 2rem;
+  box-shadow: 0 1rem 2rem rgba(85, 109, 158, 0.856);
+}
+
+.last-title {
+  position: absolute;
+  height: 8rem;
+  width: 100%;
+  font-size: 2.2rem;
+  font-family: "Tagesschrift";
+  letter-spacing: 0.18rem;
+  word-spacing: 0.4rem;
+  padding: 2rem 7rem 2rem 6rem;
+  text-decoration: underline;
+  z-index: 100;
+  top: 2rem;
+}
+.stafs {
+  position: absolute;
+  top: 14rem;
+  padding: 0 4rem 0 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.contact {
+  position: absolute;
+  top: 7rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/*************************************************************/
+.bas {
+  height: 6rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #09060b;
+  display: flex;
+  color: #fff;
+
+  gap: 8rem;
+}
+.copyright {
+  font-size: 1.5rem;
+  margin-left: -28rem;
+}
+.social-media {
+  display: flex;
+
+  gap: 6rem;
+}
+.social-media a {
+  font-size: 2.8rem;
+}
+.fa-instagram {
+  color: rgb(246, 99, 219);
+}
+.fa-facebook {
+  color: rgb(126, 177, 248);
+}
+.fa-youtube {
+  color: rgb(255, 98, 98);
+}
+
+/*************************************************************************************************/
+
+.pass-field {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pass-field i {
+  cursor: pointer;
+}
+
+/*******************************************************************************************/
+.overview-container {
+  height: 60rem;
+  width: 100%;
+  background-color: #e0f2fa;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.overview-container .right-part {
+  position: relative;
+  padding: 2rem;
+  width: 90%;
+}
+.hop {
+  position: absolute;
+  top: -14rem;
+  left: -8rem;
+  width: 100%;
+  font-family: "Delius Unicase";
+  font-size: 3rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-left: 11rem;
+  color: #575460;
+}
+.overview-container .right-part h1 {
+  position: absolute;
+  top: -7rem;
+  left: -10rem;
+  width: 100%;
+  font-family: "Ubuntu";
+  font-size: 6rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+  margin-left: 11rem;
+  color: #380e62;
+}
+.left-part .overview-img {
+  height: 55rem;
+  width: auto;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 0.5rem 4rem rgba(5, 15, 34, 0.384);
+  margin-right: 4rem;
+}
+.rendez-vous-provider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.rendez-vous-provider button {
+  height: 6rem;
+  border: none;
+  width: 26rem;
+  background-color: #f9fdff;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.provider {
+  height: 6rem;
+  border: none;
+  width: 26rem;
+  background-color: #f9fdff;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+}
+.rendez-vous-provider span:nth-child(1) {
+  padding-right: 2rem;
+  border-right: 0.2rem solid black;
+}
+
+.remplissage-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: -20rem;
+}
+.heart,
+.admission {
+  display: flex;
+  gap: 4rem;
+}
+.heart h2,
+.admission h2 {
+  font-family: "Signika Negative";
+  font-size: 2.3rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.4rem;
+  font-weight: 500;
+}
+.remplissage-container i {
+  color: #199fba;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+.remplissage-container p {
+  margin-top: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.4rem;
+}
+/********************************************************************************/
+.rendez-vous-container {
+  height: 30rem;
+  width: 100%;
+  background-color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  word-spacing: 0.7rem;
+  font-weight: 600;
+  color: #380e62;
+}
+
+.numbers {
+  height: 20rem;
+  width: 100%;
+  background-color: #f4f7fb;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 2rem;
+  font-family: "Ubuntu";
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.4rem;
+  word-spacing: 0.7rem; */
+  font-weight: 400;
+  color: #380e62;
+  padding-left: 4rem;
+}
