@@ -1,16 +1,14 @@
-
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import mysql.connector
 
 app = Flask(__name__)
-CORS(app) # Autorise les requêtes cross-origin depuis le frontend
+CORS(app) 
 
 db = mysql.connector.connect(
 host="localhost",
-user="root", # Remplace si nécessaire
-password="meryam2027", # Ton mot de passe MySQL (vide ici)
+user="root", 
+password="meryam2027",
 database="ppp_db"
 )
 
